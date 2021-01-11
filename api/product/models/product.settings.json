@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "product",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "categories": {
+      "collection": "category",
+      "via": "products"
+    },
+    "colors": {
+      "collection": "color",
+      "via": "products"
+    },
+    "sizes": {
+      "collection": "size",
+      "via": "products"
+    },
+    "seasons": {
+      "collection": "season",
+      "via": "products"
+    },
+    "homes": {
+      "collection": "home",
+      "via": "products"
+    },
+    "favorite": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    }
+  }
+}

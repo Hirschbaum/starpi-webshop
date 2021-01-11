@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "colors",
+  "info": {
+    "name": "color",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "oneColor": {
+      "type": "string"
+    },
+    "products": {
+      "via": "colors",
+      "collection": "product",
+      "dominant": true
+    }
+  }
+}

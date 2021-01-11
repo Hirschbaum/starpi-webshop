@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seasons",
+  "info": {
+    "name": "season"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "season": {
+      "type": "string"
+    },
+    "products": {
+      "via": "seasons",
+      "collection": "product",
+      "dominant": true
+    }
+  }
+}

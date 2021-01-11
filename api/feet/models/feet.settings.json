@@ -1,0 +1,13 @@
+{
+  "kind": "collectionType",
+  "collectionName": "feet",
+  "info": {
+    "name": "Feet"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {}
+}
